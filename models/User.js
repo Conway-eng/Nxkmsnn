@@ -1,9 +1,20 @@
-const mongoose = require('mongoose')
+const { DataTypes } = require('sequelize')
+const { sequelize } = require('./index')
 
-const UserSchema = new mongoose.Schema({
-  username: { type: String, unique: true },
-  password: String,
-  isAdmin: { type: Boolean, default: false }
+const User = sequelize.define('User', {
+  username: {
+    type: DataTypes.STRING,
+    unique: true,
+    allowNull: false
+  },
+  password: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  isAdmin: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+  }
 })
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = User
