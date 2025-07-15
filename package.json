@@ -1,0 +1,19 @@
+{
+  "name": "hacklink-tech-inc",
+  "version": "1.0.0",
+  "description": "Deploy WhatsApp bots to Render via browser",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^8.3.0"
+  }
+}
