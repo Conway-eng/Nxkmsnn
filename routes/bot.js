@@ -17,10 +17,10 @@ router.post('/create', async (req, res) => {
   } = req.body
 
   const bot = await Bot.create({
-    owner: req.session.user._id,
     appName, botName, sessionId, prefix,
     mode, ownerNumber, ownerName,
-    chatbot: chatbot === 'on'
+    chatbot: chatbot === 'on',
+    ownerId: req.session.user.id
   })
 
   await deployBotToRender(appName, {
