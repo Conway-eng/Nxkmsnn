@@ -1,0 +1,6 @@
+<h2>Welcome <%= user.username %>!</h2>
+<a href="/bot/create">Deploy a new Bot</a><br>
+<% if (user.isAdmin) { %>
+  <a href="/admin">Go to Admin Panel</a><br>
+<% } %>
+<a href="/logout">Logout</a>
