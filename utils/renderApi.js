@@ -9,7 +9,7 @@ async function deployBotToRender(appName, envVars) {
           type: "web",
           name: appName,
           repo: {
-            url: "https://github.com/YOUR_USERNAME/YOUR_BOT_TEMPLATE"
+            url: "https://github.com/INCONNU-BOY/INCONNU-XD-V2"
           },
           envVars: Object.entries(envVars).map(([key, value]) => ({
             key,
