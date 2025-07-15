@@ -7,8 +7,8 @@ router.get('/', async (req, res) => {
   const user = req.session.user
   if (!user || !user.isAdmin) return res.status(403).send('Access Denied')
 
-  const users = await User.find()
-  const bots = await Bot.find().populate('owner')
+  const users = await User.findAll()
+  const bots = await Bot.findAll({ include: User })
 
   res.render('admin', { users, bots })
 })
